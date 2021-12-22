@@ -25,13 +25,20 @@ min_risk = [[0 for x in range(X)] for y in range(Y)]
 
 x=0
 y=0
-neighbours = [(nx,ny) for dx,dy in [(0,-1),(0,1),(-1,0),(1,0)] if 0 <= (nx:=x+dx) < X and 0 <= (ny:=y+dy) < Y]
+
+def neighbours(x,y):
+    return ((nx,ny) for dx,dy in [(0,-1),(0,1),(-1,0),(1,0)] if 0 <= (nx:=x+dx) < X and 0 <= (ny:=y+dy) < Y)
 
 print(neighbours)
 
 for gridline in min_risk:
     print(gridline)
 
-path = []
+paths = [(0,(0,0))]
+
+while paths:
+    
+
+for neighbour in neighbours():
 
 heapq.heappush(neighbour for neighbour in neighbours)
